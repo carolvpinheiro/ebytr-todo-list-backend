@@ -7,4 +7,11 @@ const getAll = async () => {
   return tasks;
 }
 
-module.exports = { getAll };
+const create = async (data, task, status) => {
+  const db = await connection();
+  const product = await db.collection('tasks').insertOne({ data, task, status });
+
+  return { _id: product.insertedId, data, task, status };
+};
+
+module.exports = { getAll, create };

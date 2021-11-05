@@ -5,7 +5,7 @@ const client = new MongoClient(Db, {
   useUnifiedTopology: true,
 });
  
-const DB_NAME = 'EbytrTasks';
+const DB_NAME = 'ebytrTasks';
 var _db;
  
 module.exports = {
@@ -15,6 +15,7 @@ module.exports = {
       if (db)
       {
         _db = db.db(DB_NAME);
+        console.log("Successfully connected to MongoDB."); 
       }
       return callback(err);
          });

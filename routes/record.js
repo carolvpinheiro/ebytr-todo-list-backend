@@ -12,7 +12,7 @@ const ObjectId = require("mongodb").ObjectId;
 
 // This section will help you get a list of all the tasks.
 taskRoutes.route("/").get(function (_req, res) {
-  let db_connect = dbo.getDb("EbytrTasks");
+  let db_connect = dbo.getDb("ebytrTasks");
   db_connect
     .collection("tasks")
     .find({})

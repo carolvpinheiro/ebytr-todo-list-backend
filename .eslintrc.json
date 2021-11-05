@@ -16,13 +16,13 @@
 
 {
   "root": true,
-  "extend": "",
-  "parserOptions": {
-    "ecmaVersion": 6
-  },
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
-}
+  "extend": ""
+//   "parserOptions": {
+//     "ecmaVersion": 6
+//   },
+//   "env": {
+//     "browser": true,
+//     "node": true,
+//     "es6": true
+// }
 }

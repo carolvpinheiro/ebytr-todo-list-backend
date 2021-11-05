@@ -7,12 +7,15 @@ const { getAllTasks, createTask, excludeTask } = require('./controllers/tasksCon
 const app = express();
 app.use(bodyParse.json());
 
-const URL_PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
-app.get('/', getAllTasks);
+// app.get('/', getAllTasks);
+app.get('/', (req, res) => {
+  res.send('Bom dia meu povo!')
+})
 app.post('/', createTask);
 app.delete('/:id', excludeTask);
 
-app.listen(URL_PORT, () => {
-  console.log(`Escutada na porta ${URL_PORT}`);
+app.listen(PORT, () => {
+  console.log(`Escutada na porta ${PORT}`);
 });
